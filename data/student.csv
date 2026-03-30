@@ -1,4 +1,5 @@
 Student ID,Name,Age,Grade,State
-1234,aa,33,11.0,active
+1234,aa,33,1,1
 12234,aa,22,44.0,inactive
 122334,ss,12,12.0,active
+22,dd,22,5,active

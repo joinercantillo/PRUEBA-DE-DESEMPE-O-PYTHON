@@ -7,9 +7,9 @@ def add(studentlist):
             id = input("Student ID: ")
             name = str(input("Name: "))
             age = int(input("Age: "))
-            grade = int(input("Grade (1-12): "))
-            if grade not in range(1, 12):
-                grade = int(input("Enter a valid number please: "))
+            grade = input("Grade (1-12): ")
+            if grade not in ["1","2","3","4","5","6","7","8","9","10","11","12"]:
+                grade = input("Enter a valid number please: ")
             state = input("State:1=active, 0=inactive: ")
 
             if state == '1':

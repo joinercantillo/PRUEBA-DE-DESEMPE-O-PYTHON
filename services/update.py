@@ -10,12 +10,18 @@ def updatec(studentlist):
             newid = input("Enter the new student ID (press Enter to keep current): ") 
             new_name = input("Enter the new student name (press Enter to keep current): ")
             new_age = input("Enter the new student age (press Enter to keep current): ")
-            new_grade = input("Enter the new student grade (press Enter to keep current)")
+            new_grade = input("Enter the new student grade (1-12) (press Enter to keep current)")
+            if new_grade not in ["1","2","3","4","5","6","7","8","9","10","11","12"]:
+                new_grade = input("Enter a valid number please: ")
             new_state = input("Enter the new state (1=active, 0=inactive, press Enter to keep current): ")
-            if new_state == "1":
-                new_state = "active"    
-            elif new_state == "0":
+            if new_state not in ['1', '0']:   
+                print("Invalid input. Defaulting to 'inactive'.")
+                new_state = "inactive" 
+            elif new_state == 0:
                 new_state = "inactive"
+            elif new_state == 1:
+                new_state = "active"
+
             try:
                 if newid:
                     student['Student ID'] = newid
